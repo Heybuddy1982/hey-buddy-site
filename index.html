@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hey Buddy — Clarity When It Matters Most</title>
+<meta name="description" content="Hey Buddy is a governance-first, voice-activated emergency resilience and response system. Designed for moments when people cannot think clearly under pressure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #08090c;
+  --white: #f0ede8;
+  --red: #d42b21;
+  --red-dim: rgba(212,43,33,0.15);
+  --navy: #0c1829;
+  --steel: #162236;
+  --rule: rgba(240,237,232,0.1);
+  --muted: rgba(240,237,232,0.45);
+  --serif: 'Libre Baskerville', Georgia, serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  background: rgba(8,9,12,0.92);
+  backdrop-filter: blur(16px);
+}
+.nav-wordmark {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+.nav-wordmark b { color: var(--red); font-weight: 400; }
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+.nav-right a {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-right a:hover { color: var(--white); }
+.nav-cta {
+  color: var(--white) !important;
+  border: 1px solid rgba(240,237,232,0.25);
+  padding: 0.4rem 1rem;
+  transition: border-color 0.2s !important;
+}
+.nav-cta:hover { border-color: var(--white) !important; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 8rem 2.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 50% 0%, rgba(12,24,41,0.9) 0%, transparent 70%),
+    repeating-linear-gradient(0deg, transparent, transparent 59px, var(--rule) 59px, var(--rule) 60px),
+    repeating-linear-gradient(90deg, transparent, transparent 59px, var(--rule) 59px, var(--rule) 60px);
+  mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black 20%, transparent 80%);
+}
+.hero-pulse {
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 2px; height: 45vh;
+  background: linear-gradient(to bottom, var(--red), transparent);
+  animation: vpulse 2.8s ease-in-out infinite;
+  opacity: 0.6;
+}
+@keyframes vpulse { 0%,100%{opacity:0.2;height:30vh} 50%{opacity:0.8;height:45vh} }
+
+.hero-content { position: relative; display: flex; flex-direction: column; justify-content: flex-end; }
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.8rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.hero-eyebrow::before { content:''; width:20px; height:1px; background:var(--red); display:block; }
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 1.0;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  max-width: 12ch;
+}
+h1 span { font-style: italic; color: var(--muted); }
+
+.hero-tagline {
+  font-family: var(--mono);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: rgba(240,237,232,0.6);
+  max-width: 52ch;
+  line-height: 1.85;
+  margin-bottom: 3rem;
+}
+
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-red {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-red:hover { background: #b5221a; transform: translateY(-1px); }
+.btn-outline {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid rgba(240,237,232,0.18);
+  padding: 0.9rem 2.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: rgba(240,237,232,0.45); color: var(--white); }
+
+.hero-bottom {
+  position: relative;
+  display: flex; align-items: center; gap: 3rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.hero-stat { }
+.hero-stat-num {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+.hero-stat-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* SECTION COMMON */
+section { padding: 6rem 2.5rem; }
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.section-label::before { content:''; width:14px; height:1px; background:var(--red); display:block; }
+h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+h2 em { font-style: italic; color: var(--muted); }
+.inner { max-width: 920px; margin: 0 auto; }
+
+/* PROBLEM */
+.problem { background: var(--navy); }
+.problem-body {
+  font-size: 1.05rem;
+  color: rgba(240,237,232,0.6);
+  max-width: 54ch;
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+.stress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  margin-top: 3rem;
+}
+.stress-item {
+  background: var(--navy);
+  padding: 1.4rem 1.6rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  transition: background 0.2s, color 0.2s;
+}
+.stress-item:hover { background: var(--steel); color: var(--white); }
+.stress-item span {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+/* HOW IT WORKS */
+.how { background: var(--black); }
+.steps { margin-top: 3.5rem; display: flex; flex-direction: column; gap: 0; }
+.step {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  border-top: 1px solid var(--rule);
+  padding: 2.2rem 0;
+  gap: 2rem;
+  align-items: start;
+  transition: background 0.2s;
+  padding-right: 1rem;
+}
+.step:last-child { border-bottom: 1px solid var(--rule); }
+.step-num {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  padding-top: 0.25rem;
+}
+.step h3 {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+.step p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 56ch;
+}
+
+/* PEAL */
+.peal { background: #060810; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.peal-intro {
+  font-size: 1rem;
+  color: rgba(240,237,232,0.55);
+  max-width: 54ch;
+  line-height: 1.9;
+  margin-bottom: 4rem;
+}
+.gates { position: relative; }
+.gates::before {
+  content: '';
+  position: absolute;
+  left: 1.1rem; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, var(--red) 0%, rgba(212,43,33,0.05) 100%);
+}
+.gate {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  align-items: start;
+  position: relative;
+}
+.gate + .gate { border-top: 1px solid rgba(240,237,232,0.05); }
+.gate-num {
+  width: 2.2rem; height: 2.2rem;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--black);
+  position: relative; z-index: 1;
+  flex-shrink: 0;
+}
+.gate-num span { font-family: var(--mono); font-size: 0.58rem; color: var(--red); }
+.gate-body h4 {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.gate-body p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+.gate-fail {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--red);
+  opacity: 0.65;
+  margin-top: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+/* INVARIANTS */
+.invariants { background: var(--navy); }
+.inv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  margin-top: 3rem;
+}
+.inv-item {
+  background: var(--navy);
+  padding: 2rem;
+}
+.inv-title {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--rule);
+}
+.inv-text { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+/* IS / ISNOT */
+.isnot { background: var(--black); }
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--rule);
+  margin-top: 3rem;
+}
+.compare-col { padding: 2.5rem; background: var(--black); }
+.compare-col.is { background: rgba(12,24,41,0.5); }
+.compare-head {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.compare-head.yes { color: rgba(240,237,232,0.4); }
+.compare-head.no { color: var(--red); opacity: 0.7; }
+.compare-item {
+  font-size: 0.88rem;
+  color: var(--muted);
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(240,237,232,0.04);
+  display: flex; align-items: baseline; gap: 0.7rem;
+  line-height: 1.5;
+}
+.compare-item::before { content:''; display:block; width:3px; height:3px; border-radius:50%; flex-shrink:0; margin-top:0.5rem; }
+.is .compare-item::before { background: rgba(240,237,232,0.25); }
+.isnot-col .compare-item::before { background: var(--red); opacity: 0.6; }
+
+/* MISSION */
+.mission { background: var(--navy); }
+.mission-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.55;
+  max-width: 28ch;
+  border-left: 2px solid var(--red);
+  padding-left: 1.8rem;
+  margin: 3rem 0;
+}
+.mission-principle {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.mission-principle-text {
+  font-size: 1rem;
+  color: rgba(240,237,232,0.65);
+  line-height: 1.8;
+  max-width: 52ch;
+}
+
+/* SIGNUP */
+.signup { background: var(--black); }
+.signup-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+.signup-inner h2 { margin-bottom: 0.75rem; }
+.signup-sub {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+.form { display: flex; flex-direction: column; gap: 0.7rem; text-align: left; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+.form input {
+  background: rgba(240,237,232,0.04);
+  border: 1px solid rgba(240,237,232,0.1);
+  color: var(--white);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding: 0.9rem 1.1rem;
+  outline: none;
+  width: 100%;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: border-color 0.2s;
+}
+.form input::placeholder { color: rgba(240,237,232,0.2); }
+.form input:focus { border-color: rgba(240,237,232,0.3); }
+.form button {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.3rem;
+}
+.form button:hover { background: #b5221a; }
+.form-note {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: rgba(240,237,232,0.2);
+  text-align: center;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  padding: 2.5rem 2.5rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-mark {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(240,237,232,0.25);
+}
+.footer-mark b { color: var(--red); font-weight: 400; }
+.footer-disclaimer {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: rgba(240,237,232,0.18);
+  max-width: 48ch;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+/* ANIM */
+.reveal { opacity:0; transform:translateY(20px); transition:opacity 0.65s ease, transform 0.65s ease; }
+.reveal.in { opacity:1; transform:translateY(0); }
+
+/* MOBILE */
+@media(max-width:680px){
+  nav { padding: 1rem 1.25rem; }
+  .nav-right a:not(.nav-cta) { display:none; }
+  .hero { padding: 7rem 1.25rem 4rem; }
+  section { padding: 4rem 1.25rem; }
+  .compare { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { flex-direction: column; }
+  .footer-disclaimer { max-width: 100%; }
+  .step { grid-template-columns: 3.5rem 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-wordmark">Hey<b>·</b>Buddy</a>
+  <div class="nav-right">
+    <a href="#how">How it works</a>
+    <a href="#governance">Governance</a>
+    <a href="#join" class="nav-cta">Early access</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pulse"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Voice-Activated Emergency Resilience</p>
+    <h1>Clarity When It <span>Matters Most.</span></h1>
+    <p class="hero-tagline">Governance-first · Voice-activated · Consent-based</p>
+    <p class="hero-desc">Hey Buddy is designed for moments when people cannot think clearly, communicate effectively, or physically operate technology during a crisis. Governance before execution. Always.</p>
+    <div class="hero-actions">
+      <a href="#join" class="btn-red">Join early access</a>
+      <a href="#governance" class="btn-outline">Read the governance approach</a>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-stat">
+      <div class="hero-stat-num">60</div>
+      <div class="hero-stat-label">Critical seconds</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">4</div>
+      <div class="hero-stat-label">Safety gates before execution</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">0</div>
+      <div class="hero-stat-label">Autonomous escalations</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem" id="why">
+  <div class="inner">
+    <p class="section-label reveal">The problem</p>
+    <h2 class="reveal">Most technology assumes <em>you can think clearly.</em></h2>
+    <p class="problem-body reveal">During emergencies, people lose the very abilities required to solve the emergency itself. Stress degrades decision-making, communication, memory, orientation, and situational awareness simultaneously.</p>
+    <p class="problem-body reveal">People struggle to explain where they are. To communicate what happened. To remember critical information. To operate their phone. To determine what to do next.</p>
+    <div class="stress-grid reveal">
+      <div class="stress-item"><span>⟳</span>Decision making</div>
+      <div class="stress-item"><span>◎</span>Communication</div>
+      <div class="stress-item"><span>◈</span>Memory recall</div>
+      <div class="stress-item"><span>⊕</span>Orientation</div>
+      <div class="stress-item"><span>◉</span>Situational awareness</div>
+      <div class="stress-item"><span>△</span>Problem solving</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="inner">
+    <p class="section-label reveal">How it works</p>
+    <h2 class="reveal">Four steps.<br><em>Strict sequence.</em></h2>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-num">Step 01</span>
+        <div>
+          <h3>Activation</h3>
+          <p>The user activates the system using the wake phrase: <em>"Hey Buddy."</em> The system begins validation immediately. Nothing else happens yet.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">Step 02</span>
+        <div>
+          <h3>PEAL Validation</h3>
+          <p>Before any action is allowed, the Pre-Execution Admission Layer runs four governance gates. Nothing executes by default. Every activation must earn permission.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">Step 03</span>
+        <div>
+          <h3>Structured Assistance</h3>
+          <p>Once validated, Hey Buddy provides bounded assistance appropriate to the situation — orientation, location context, emergency guidance, communication support. All responses remain constrained by governance rules.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">Step 04</span>
+        <div>
+          <h3>Controlled Escalation</h3>
+          <p>When appropriate, Hey Buddy assists in contacting trusted contacts or preparing emergency information. Escalation remains governed by consent. The system recommends. The human decides.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEAL -->
+<section class="peal" id="governance">
+  <div class="inner">
+    <p class="section-label reveal">Pre-Execution Admission Layer</p>
+    <h2 class="reveal">Nothing executes<br><em>by default.</em></h2>
+    <p class="peal-intro reveal">Most AI places intelligence before governance. Hey Buddy reverses that. Every activation passes four gates before execution is permitted. This is not a feature. It is the architecture.</p>
+    <div class="gates">
+      <div class="gate reveal">
+        <div class="gate-num"><span>G1</span></div>
+        <div class="gate-body">
+          <h4>Signal Authenticity</h4>
+          <p>Validates real human speech, replay resistance, environmental consistency, and activation confidence.</p>
+          <p class="gate-fail">Fail → No execution. Passive only.</p>
+        </div>
+      </div>
+      <div class="gate reveal">
+        <div class="gate-num"><span>G2</span></div>
+        <div class="gate-body">
+          <h4>Identity Confidence</h4>
+          <p>Evaluates trusted speaker confidence, enrolled voice match, and authorized usage thresholds.</p>
+          <p class="gate-fail">Fail → Restricted mode. No escalation.</p>
+        </div>
+      </div>
+      <div class="gate reveal">
+        <div class="gate-num"><span>G3</span></div>
+        <div class="gate-body">
+          <h4>Intent Classification</h4>
+          <p>Determines emergency, distress, assistance request, accidental activation, or misuse. Only validated crisis intent proceeds.</p>
+          <p class="gate-fail">Fail → Clarification state. Escalation blocked.</p>
+        </div>
+      </div>
+      <div class="gate reveal">
+        <div class="gate-num"><span>G4</span></div>
+        <div class="gate-body">
+          <h4>Context & Constraint Validation</h4>
+          <p>Checks environmental plausibility, escalation appropriateness, interference conditions, and false activation patterns.</p>
+          <p class="gate-fail">Fail → Hard stop. Log-only mode.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVARIANTS -->
+<section class="invariants">
+  <div class="inner">
+    <p class="section-label reveal">Safety invariants</p>
+    <h2 class="reveal">Rules that<br><em>cannot be overridden.</em></h2>
+    <div class="inv-grid reveal">
+      <div class="inv-item">
+        <div class="inv-title">Human Safety Supremacy</div>
+        <p class="inv-text">No action may increase risk to a human. When uncertainty increases, capability decreases — never expands.</p>
+      </div>
+      <div class="inv-item">
+        <div class="inv-title">No Autonomous Escalation</div>
+        <p class="inv-text">The system may recommend. It does not autonomously execute safety-critical escalation. Human authority remains required.</p>
+      </div>
+      <div class="inv-item">
+        <div class="inv-title">No Risk Downgrading</div>
+        <p class="inv-text">Escalation cannot automatically reduce itself. Once a crisis state is entered, only authorized human action may reduce escalation severity.</p>
+      </div>
+      <div class="inv-item">
+        <div class="inv-title">Immutable Accountability</div>
+        <p class="inv-text">System events and safety actions remain auditable. Critical incident logs may not be silently altered or erased.</p>
+      </div>
+      <div class="inv-item">
+        <div class="inv-title">No Learning During Crisis</div>
+        <p class="inv-text">The system does not retrain, experiment, or modify itself during active emergency execution. Learning occurs post-event only.</p>
+      </div>
+      <div class="inv-item">
+        <div class="inv-title">Governance Supremacy</div>
+        <p class="inv-text">No model, prompt, agent, or developer may bypass governance constraints. Governance is the operating system — not a feature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IS / IS NOT -->
+<section class="isnot">
+  <div class="inner">
+    <p class="section-label reveal">Positioning</p>
+    <h2 class="reveal">What Hey Buddy is.<br><em>What it is not.</em></h2>
+    <div class="compare reveal">
+      <div class="compare-col is">
+        <div class="compare-head yes">Hey Buddy is</div>
+        <div class="compare-item">Voice-activated emergency resilience system</div>
+        <div class="compare-item">Governance-first safety architecture</div>
+        <div class="compare-item">Deterministic response platform</div>
+        <div class="compare-item">Controlled escalation framework</div>
+        <div class="compare-item">Human-centered resilience infrastructure</div>
+        <div class="compare-item">Consent-based at every step</div>
+        <div class="compare-item">Built for institutional compatibility</div>
+      </div>
+      <div class="compare-col isnot-col">
+        <div class="compare-head no">Hey Buddy is not</div>
+        <div class="compare-item">An autonomous AI agent</div>
+        <div class="compare-item">A replacement for emergency dispatch</div>
+        <div class="compare-item">A therapist or medical device</div>
+        <div class="compare-item">A diagnostic system</div>
+        <div class="compare-item">A surveillance platform</div>
+        <div class="compare-item">An always-listening assistant</div>
+        <div class="compare-item">An emotional AI companion</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="inner">
+    <p class="section-label reveal">Our mission</p>
+    <div class="mission-quote reveal">
+      "Help people think, communicate, and respond more effectively when it matters most."
+    </div>
+    <p class="mission-principle reveal">Our principle</p>
+    <p class="mission-principle-text reveal">Emotional safety through technical discipline. AI constrained by design, not by hope. Reliability matters more than intelligence — especially when everything else breaks down.</p>
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section class="signup" id="join">
+  <div class="signup-inner">
+    <p class="section-label reveal" style="justify-content:center">Early access</p>
+    <h2 class="reveal">Join the community</h2>
+    <p class="signup-sub reveal">Get build updates, early supporter notes, progress milestones, and ways to help shape Hey Buddy toward V1.</p>
+    <form class="form reveal" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <input type="text" name="firstName" placeholder="First name" required>
+        <input type="text" name="lastName" placeholder="Last name" required>
+      </div>
+      <input type="email" name="email" placeholder="Email address" required>
+      <button type="submit">Sign me up →</button>
+      <p class="form-note">No passive data collection. No background monitoring. Unsubscribe any time.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-mark">Hey<b>·</b>Buddy — Vancouver, CA</div>
+  <p class="footer-disclaimer">Hey Buddy is not a replacement for emergency services. If you are in immediate danger, call 911 or your local emergency number. Hey Buddy is a bounded crisis orientation layer, not an autonomous emergency system.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }});
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = "You're in. Welcome.";
+  btn.style.background = '#1a4a2a';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
