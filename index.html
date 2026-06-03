@@ -762,18 +762,60 @@ footer {
 </footer>
 
 <script>
+const SUPABASE_URL = 'https://osokdhawzaslkbvqccas.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zb2tkaGF3emFzbGtidnFjY2FzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0OTgyMzAsImV4cCI6MjA5NjA3NDIzMH0.i6qmLnnou7UVa5qWaOoDptU7mqrZYU9a072vspco7IY';
+
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }});
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button');
-  btn.textContent = "You're in. Welcome.";
-  btn.style.background = '#1a4a2a';
+  const form = e.target;
+  const firstName = form.firstName.value.trim();
+  const lastName = form.lastName.value.trim();
+  const email = form.email.value.trim();
+
+  btn.textContent = 'Submitting...';
   btn.disabled = true;
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/signups`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        source: 'website'
+      })
+    });
+
+    if (res.ok || res.status === 201) {
+      btn.textContent = "You're in. Welcome.";
+      btn.style.background = '#1a4a2a';
+      form.reset();
+    } else if (res.status === 409) {
+      btn.textContent = 'Already signed up.';
+      btn.style.background = '#2a2a1a';
+      setTimeout(() => { btn.textContent = 'Sign me up →'; btn.disabled = false; btn.style.background = ''; }, 3000);
+    } else {
+      throw new Error('Server error');
+    }
+  } catch(err) {
+    btn.textContent = 'Something went wrong. Try again.';
+    btn.style.background = '#4a1a1a';
+    setTimeout(() => { btn.textContent = 'Sign me up →'; btn.disabled = false; btn.style.background = ''; }, 3000);
+  }
 }
+
 </script>
 </body>
 </html>
