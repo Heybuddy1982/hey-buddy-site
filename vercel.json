@@ -1,1 +1,26 @@
-{"version":2}
+{
+  "version": 2,
+  "outputDirectory": ".",
+  "buildCommand": "node -e \"const fs=require('fs');const sha=(process.env.VERCEL_GIT_COMMIT_SHA||'').slice(0,7);fs.writeFileSync('version.json',JSON.stringify({build:sha||('ts-'+Date.now().toString(36)),deployedAt:new Date().toISOString()}))\"",
+  "headers": [
+    {
+      "source": "/version.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    }
+  ]
+}
