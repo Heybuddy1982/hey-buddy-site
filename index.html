@@ -146,9 +146,13 @@
   --navy:  #080d1e;
   --blue:  #1a3bff;
   --glow:  #4169ff;
-  --arc:   #7ba7ff;
-  --white:  #f0f4ff;
-  --muted:  rgba(176,196,255,0.45);
+  --arc:   #1a3bff;   /* accent, readable on white */
+  --white:  #0e1424;  /* primary text (dark on white) */
+  --muted:  #47516a;  /* secondary text */
+  --paper:  #ffffff;
+  --paper2: #f6f8fd;
+  --line:  #e4e8f3;
+  --accent: #1a3bff;
   --syne:  'Syne', sans-serif;
   --inter:  'Inter', sans-serif;
  }
@@ -156,7 +160,7 @@
  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
  body {
-  background: var(--black);
+  background: var(--paper);
   color: var(--white);
   font-family: var(--inter);
   font-size: 16px;
@@ -896,6 +900,57 @@
     text-decoration: none;
   }
   .skip-link:focus { top: 16px; }
+
+ /* ============ LIGHT THEME (readability pass) ============ */
+ /* Content sits on clean white; hero, closing orb band and footer stay
+    dark so the orb keeps its glow. Accents are the orb's blue. */
+ #moment    { background: var(--paper2); }
+ #how       { background: var(--paper); }
+ #trust     { background: var(--paper2); }
+ #who       { background: var(--paper); }
+ #vancouver { background: var(--paper2); border-top-color: var(--line); border-bottom-color: var(--line); }
+ .moment-number { -webkit-text-stroke: 1px rgba(26,59,255,0.22); }
+
+ /* cards → white with a soft border, gentle shadow, real spacing */
+ .steps, .phase-grid, .trust-pillars, .van-questions, .van-dates { gap: 16px; }
+ .step, .phase-card, .pillar, .van-q, .van-date-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(16,20,40,0.05);
+ }
+ .phase-active { border-top: 2px solid var(--accent); }
+ .pillar { border-left: 3px solid var(--accent); }
+ .van-q  { border-left: 3px solid var(--accent); }
+ .phase-tags span { border-color: rgba(26,59,255,0.18); }
+ .phase-badge { color: #fff; }
+
+ /* dark blocks keep dark background + light text */
+ nav { background: rgba(6,10,20,0.82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+ .nav-logo { color: #f0f4ff; }
+ .nav-cta { color: #cdd8ff; border-color: rgba(180,200,255,0.35); }
+ .nav-cta:hover { border-color: #7ba7ff; color: #fff; }
+
+ #hero { background: var(--black); }
+ .hero-eyebrow  { color: rgba(184,204,255,0.62); }
+ .hero-headline { color: #f2f5ff; }
+ .hero-headline em { color: #7ba7ff; }
+ .hero-sub  { color: rgba(200,214,255,0.74); }
+ .orb-label { color: rgba(184,204,255,0.55); }
+ .scroll-line { background: linear-gradient(to bottom, #7ba7ff, transparent); }
+ .btn-primary { color: #fff; }
+ .btn-primary:hover { background: #0f2bd6; }
+ .btn-ghost { color: #dbe4ff; border-color: rgba(180,200,255,0.35); }
+ .btn-ghost:hover { border-color: #7ba7ff; color: #fff; }
+
+ #cta-band { background: var(--navy); }
+ #cta-band h2 { color: #f2f5ff; }
+ #cta-band h2 em { color: #7ba7ff; }
+ #cta-band p { color: rgba(200,214,255,0.74); }
+ .cta-orb-label { color: rgba(184,204,255,0.55); }
+
+ footer { background: var(--navy); border-top-color: rgba(180,200,255,0.12); }
+ .footer-logo { color: rgba(210,222,255,0.72); }
+ footer small { color: rgba(184,204,255,0.5); }
 </style>
 </head>
 <body>
