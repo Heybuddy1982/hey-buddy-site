@@ -2,1247 +2,324 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>heybuddy — campus safety for students &amp; faculty | Vancouver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hey Buddy | Voice help for older adults living alone</title>
+<meta name="description" content="If Mom falls and can't get up, she doesn't need to find a button. She just says 'Hey Buddy.' Prototype. Not an emergency service. Works alongside 911.">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="53rHMHVlUnFWCI8h74290r0Sv-WeKJZX8b33IgjfYZs" />
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="heybuddy — campus safety for students &amp; faculty">
-<meta name="twitter:description" content="Say heybuddy. Voice-activated campus safety for students and faculty — injury, intoxication, harassment, assault, silent emergencies, walking alone.">
-<meta name="twitter:image" content="https://heybuddyapp.ca/og-image.jpg">
-<meta property="og:image" content="https://heybuddyapp.ca/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="heybuddy — voice-activated campus safety for students and faculty">
-<meta property="og:site_name" content="heybuddy">
-<meta property="og:locale" content="en_CA">
+<meta name="theme-color" content="#0a0f1c">
+<link rel="icon" href="https://hey-buddy-canada.lovable.app/pwa-192x192.png" type="image/png">
+<link rel="apple-touch-icon" href="https://hey-buddy-canada.lovable.app/pwa-192x192.png">
 <link rel="canonical" href="https://heybuddyapp.ca">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "heybuddy",
-  "description": "Voice-activated campus safety for students and faculty. Governance-first, consent-based, hands-free.",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web",
-  "url": "https://heybuddyapp.ca",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "CAD"
-  },
-  "creator": {
-    "@type": "Organization",
-    "name": "heybuddy",
-    "url": "https://heybuddyapp.ca",
-    "email": "support@heybuddyapp.ca",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vancouver",
-      "addressRegion": "BC",
-      "addressCountry": "CA"
-    },
-    "sameAs": [
-      "https://www.instagram.com/passionateheybuddy",
-      "https://www.facebook.com/profile.php?id=61584194698091"
-    ]
-  }
-}
-</script>
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "The Vancouver Experiment — heybuddy at English Bay",
-    "description": "Scenario-first pop-up: heybuddy asks Vancouverites three questions about safety and trust near the English Bay concession stand.",
-    "startDate": "2026-07-12T11:00:00-07:00",
-    "endDate": "2026-07-12T14:00:00-07:00",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "Place",
-      "name": "English Bay Beach",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Vancouver",
-        "addressRegion": "BC",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.2856,
-        "longitude": -123.1416
-      }
-    },
-    "organizer": {
-      "@type": "Organization",
-      "name": "heybuddy",
-      "url": "https://heybuddyapp.ca"
-    },
-    "isAccessibleForFree": true
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "The Vancouver Experiment — heybuddy at English Bay",
-    "description": "Scenario-first pop-up: heybuddy asks Vancouverites three questions about safety and trust near the English Bay concession stand.",
-    "startDate": "2026-07-19T11:00:00-07:00",
-    "endDate": "2026-07-19T14:00:00-07:00",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "Place",
-      "name": "English Bay Beach",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Vancouver",
-        "addressRegion": "BC",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.2856,
-        "longitude": -123.1416
-      }
-    },
-    "organizer": {
-      "@type": "Organization",
-      "name": "heybuddy",
-      "url": "https://heybuddyapp.ca"
-    },
-    "isAccessibleForFree": true
-  }
-]
-</script>
-<meta name="description" content="heybuddy — voice-activated campus safety for students and faculty. Built for the first 60 seconds of any campus emergency: injury, intoxication, harassment, assault, silent situations, walking alone. Vancouver, BC.">
-<meta property="og:title" content="heybuddy — campus safety for students &amp; faculty">
-<meta property="og:description" content="Voice-activated campus safety for students and faculty. The first 60 seconds of any campus emergency, governance-first and consent-first. Made in Vancouver.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Hey Buddy">
+<meta property="og:locale" content="en_CA">
 <meta property="og:url" content="https://heybuddyapp.ca">
-<meta name="theme-color" content="#000000">
+<meta property="og:title" content="If Mom falls, she just says 'Hey Buddy.'">
+<meta property="og:description" content="Voice help for the people you love who live alone. Prototype. Not an emergency service. Works alongside 911.">
+<meta property="og:image" content="https://hey-buddy-canada.lovable.app/pwa-192x192.png">
+<meta property="og:image:alt" content="Hey Buddy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="If Mom falls, she just says 'Hey Buddy.'">
+<meta name="twitter:description" content="Voice help for the people you love who live alone. Prototype. Not an emergency service. Works alongside 911.">
+<meta name="twitter:image" content="https://hey-buddy-canada.lovable.app/pwa-192x192.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hey Buddy","description":"Voice help for older adults living alone. Prototype. Not an emergency service. Works alongside 911.","applicationCategory":"LifestyleApplication","operatingSystem":"Web","url":"https://heybuddyapp.ca","creator":{"@type":"Organization","name":"Hey Buddy","url":"https://heybuddyapp.ca","address":{"@type":"PostalAddress","addressLocality":"Vancouver","addressRegion":"BC","addressCountry":"CA"},"sameAs":["https://www.instagram.com/passionateheybuddy","https://www.facebook.com/profile.php?id=61584194698091"]}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
- *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
- .visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
- }
-
- :root {
-  --black:  #000000;
-  --deep:  #03050f;
-  --navy:  #080d1e;
-  --blue:  #1a3bff;
-  --glow:  #4169ff;
-  --arc:   #1a3bff;   /* accent, readable on white */
-  --white:  #0e1424;  /* primary text (dark on white) */
-  --muted:  #47516a;  /* secondary text */
-  --paper:  #ffffff;
-  --paper2: #f6f8fd;
-  --line:  #e4e8f3;
-  --accent: #1a3bff;
-  --syne:  'Syne', sans-serif;
-  --inter:  'Inter', sans-serif;
- }
-
- html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-
- body {
-  background: var(--paper);
-  color: var(--white);
-  font-family: var(--inter);
-  font-size: 16px;
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
- }
-
- /* ── NAV ── */
- nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
- }
- .nav-logo {
-  font-family: var(--syne);
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  text-decoration: none;
- }
- 
- .nav-cta {
-  font-family: var(--inter);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--arc);
-  text-decoration: none;
-  border: 1px solid rgba(123,167,255,0.3);
-  padding: 8px 20px;
-  border-radius: 2px;
-  transition: border-color 0.2s, color 0.2s;
- }
- .nav-cta:hover { border-color: var(--arc); color: var(--white); }
-
- /* ── HERO ── */
- #hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 96px 24px 40px;
-  overflow: hidden;
- }
-
- /* ambient radial behind orb */
- #hero::before {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -60%);
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(26,59,255,0.18) 0%, transparent 70%);
-  pointer-events: none;
- }
-
- /* particle canvas */
-
- .hero-eyebrow {
-  font-family: var(--inter);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 32px;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.3s forwards;
- }
-
- /* Orb wrapper — clickable */
- .orb-link {
-  display: block;
-  position: relative;
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 48px;
-  cursor: pointer;
-  text-decoration: none;
-  opacity: 0;
-  animation: fadeUp 1s ease 0.1s forwards;
- }
-
- /* pulse rings behind orb */
- .orb-ring {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 1px solid rgba(65,105,255,0.25);
-  animation: ringPulse 3s ease-out infinite;
-  pointer-events: none;
- }
- .orb-ring:nth-child(1) { width: 240px; height: 240px; animation-delay: 0s; }
- .orb-ring:nth-child(2) { width: 300px; height: 300px; animation-delay: 0.8s; }
- .orb-ring:nth-child(3) { width: 370px; height: 370px; animation-delay: 1.6s; }
-
- @keyframes ringPulse {
-  0%  { opacity: 0.6; transform: translate(-50%,-50%) scale(0.95); }
-  100% { opacity: 0;  transform: translate(-50%,-50%) scale(1.15); }
- }
-
- @keyframes orbPulse {
-  0%, 100% { filter: drop-shadow(0 0 30px rgba(65,105,255,0.45)) brightness(1); transform: scale(1); }
-  50%    { filter: drop-shadow(0 0 65px rgba(65,105,255,0.85)) brightness(1.08); transform: scale(1.03); }
- }
-
- .orb-img {
-  position: relative;
-  z-index: 2;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  overflow: hidden;
-  object-fit: cover;
-  display: block;
-  clip-path: circle(50%);
-  animation: orbPulse 3.5s ease-in-out infinite;
- }
- .orb-link:hover .orb-img {
-  animation: none;
-  filter: drop-shadow(0 0 80px rgba(65,105,255,0.95)) brightness(1.12);
-  transform: scale(1.06);
-  transition: transform 0.35s ease, filter 0.35s ease;
- }
-
- .orb-label {
-  position: absolute;
-  bottom: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
-  white-space: nowrap;
-  z-index: 3;
- }
-
- .hero-headline {
-  font-family: var(--syne);
-  font-size: clamp(2.8rem, 8vw, 6.5rem);
-  font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  margin-bottom: 28px;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.5s forwards;
- }
- .hero-headline em {
-  font-style: normal;
-  color: var(--arc);
- }
-
- .hero-sub {
-  font-family: var(--inter);
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  font-weight: 300;
-  color: var(--muted);
-  max-width: 480px;
-  margin: 0 auto 48px;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.7s forwards;
- }
-
- .hero-cta-group {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeUp 0.9s ease 0.9s forwards;
- }
-
- .btn-primary {
-  font-family: var(--inter);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--black);
-  background: var(--arc);
-  border: none;
-  padding: 14px 32px;
-  border-radius: 2px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.2s;
-  display: inline-block;
- }
- .btn-primary:hover { background: var(--white); transform: translateY(-2px); }
-
- .btn-ghost {
-  font-family: var(--inter);
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  background: transparent;
-  border: 1px solid rgba(123,167,255,0.25);
-  padding: 14px 32px;
-  border-radius: 2px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
-  display: inline-block;
- }
- .btn-ghost:hover { border-color: var(--arc); color: var(--white); }
-
- .scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  opacity: 0;
-  animation: fadeUp 1s ease 1.4s forwards;
- }
- .scroll-line {
-  width: 1px;
-  height: 48px;
-  background: linear-gradient(to bottom, var(--arc), transparent);
-  animation: scrollDrop 2s ease-in-out infinite;
- }
- @keyframes scrollDrop {
-  0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
-  50%    { opacity: 0.8; transform: scaleY(1); }
- }
-
- @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to  { opacity: 1; transform: translateY(0); }
- }
-
- /* ── SECTION BASE ── */
- section {
-  padding: 120px 24px;
-  max-width: 1100px;
-  margin: 0 auto;
- }
-
- .section-eyebrow {
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--arc);
-  margin-bottom: 20px;
-  display: block;
- }
-
- /* ── MOMENT ── */
- #moment {
-  max-width: 100%;
-  padding: 120px 24px;
-  background: linear-gradient(to bottom, var(--black), var(--deep));
-  text-align: center;
- }
- #moment .inner { max-width: 800px; margin: 0 auto; }
-
- .moment-number {
-  font-family: var(--syne);
-  font-size: clamp(5rem, 18vw, 14rem);
-  font-weight: 800;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(123,167,255,0.2);
-  letter-spacing: -0.04em;
-  display: block;
-  margin-bottom: -20px;
- }
-
- .moment-headline {
-  font-family: var(--syne);
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  color: var(--white);
- }
-
- .moment-body {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--muted);
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.75;
- }
-
- /* ── HOW IT WORKS ── */
- #how {
-  background: var(--deep);
-  max-width: 100%;
-  padding: 120px 24px;
- }
- #how .inner { max-width: 1100px; margin: 0 auto; }
- #how h2 {
-  font-family: var(--syne);
-  font-size: clamp(1.6rem, 4vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 64px;
-  color: var(--white);
- }
-
- .steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2px;
- }
-
- .step {
-  background: var(--navy);
-  padding: 40px 32px;
-  border-top: 1px solid rgba(123,167,255,0.12);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
- }
- .step.visible { opacity: 1; transform: translateY(0); }
-
- .step-gate {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--arc);
-  margin-bottom: 16px;
-  display: block;
- }
- .step h3 {
-  font-family: var(--syne);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--white);
- }
- .step p {
-  font-size: 0.88rem;
-  font-weight: 300;
-  color: var(--muted);
-  line-height: 1.7;
- }
-
- /* ── TRUST ── */
- #trust {
-  max-width: 100%;
-  padding: 120px 24px;
-  background: var(--black);
- }
- #trust .inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
- }
- .trust-text h2 {
-  font-family: var(--syne);
-  font-size: clamp(1.6rem, 4vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
-  color: var(--white);
-  line-height: 1.1;
- }
- .trust-text p {
-  font-size: 0.95rem;
-  font-weight: 300;
-  color: var(--muted);
-  line-height: 1.8;
-  margin-bottom: 16px;
- }
- .trust-pillars {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
- }
- .pillar {
-  padding: 24px 28px;
-  background: var(--navy);
-  border-left: 2px solid rgba(123,167,255,0.2);
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
- }
- .pillar.visible { opacity: 1; transform: translateX(0); }
- .pillar-title {
-  font-family: var(--syne);
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--arc);
-  margin-bottom: 6px;
- }
- .pillar p {
-  font-size: 0.82rem;
-  color: var(--muted);
-  line-height: 1.6;
-  margin: 0;
- }
-
- /* ── PHASES ── */
- #who {
-  max-width: 100%;
-  padding: 120px 24px;
-  background: var(--deep);
- }
- #who .inner { max-width: 1100px; margin: 0 auto; }
- #who h2 {
-  font-family: var(--syne);
-  font-size: clamp(1.6rem, 4vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
-  color: var(--white);
-  line-height: 1.1;
- }
- #who h2 em { font-style: normal; color: var(--arc); }
- #who .sub {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin-bottom: 56px;
-  font-weight: 300;
-  max-width: 560px;
- }
- .phase-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2px;
- }
- .phase-card {
-  background: var(--navy);
-  padding: 40px 32px;
-  border-top: 1px solid rgba(123,167,255,0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
- }
- .phase-card.visible { opacity: 1; transform: translateY(0); }
- .phase-active {
-  border-top: 2px solid var(--arc);
- }
- .phase-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  gap: 8px;
- }
- .phase-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
- }
- .phase-active .phase-label { color: var(--arc); }
- .phase-badge {
-  font-size: 0.58rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--black);
-  background: var(--arc);
-  padding: 3px 10px;
-  border-radius: 2px;
-  font-weight: 600;
- }
- .phase-card h3 {
-  font-family: var(--syne);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 14px;
- }
- .phase-card p {
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: var(--muted);
-  line-height: 1.75;
-  margin-bottom: 24px;
- }
- .phase-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
- }
- .phase-tags span {
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  border: 1px solid rgba(123,167,255,0.15);
-  padding: 4px 12px;
-  border-radius: 2px;
- }
-
- /* ── CTA BAND ── */
- #cta-band {
-  max-width: 100%;
-  padding: 140px 24px;
-  background: var(--black);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
- }
- #cta-band::before {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(26,59,255,0.12) 0%, transparent 70%);
-  pointer-events: none;
- }
- #cta-band h2 {
-  font-family: var(--syne);
-  font-size: clamp(2rem, 6vw, 4.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  margin-bottom: 20px;
-  line-height: 1;
-  position: relative;
- }
- #cta-band h2 em {
-  font-style: normal;
-  color: var(--arc);
- }
- #cta-band p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin-bottom: 40px;
-  font-weight: 300;
-  position: relative;
- }
- .cta-orb-link {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 32px;
-  cursor: pointer;
- }
- .cta-orb-link img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  clip-path: circle(50%);
-  object-fit: cover;
-  display: block;
-  filter: drop-shadow(0 0 30px rgba(65,105,255,0.5));
-  transition: filter 0.3s ease, transform 0.3s ease;
- }
- .cta-orb-link:hover img {
-  filter: drop-shadow(0 0 60px rgba(65,105,255,0.9));
-  transform: scale(1.06);
- }
- .cta-orb-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 12px;
-  display: block;
- }
-
- /* ── FOOTER ── */
- footer {
-  border-top: 1px solid rgba(123,167,255,0.08);
-  padding: 40px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
- }
- .footer-logo {
-  font-family: var(--syne);
-  font-size: 0.9rem;
-  font-weight: 800;
-  color: var(--muted);
-  letter-spacing: -0.01em;
- }
- 
- footer small {
-  font-size: 0.72rem;
-  color: rgba(123,167,255,0.3);
-  letter-spacing: 0.05em;
- }
-
- /* ── MOBILE ── */
-
- /* ── VANCOUVER ── */
- #vancouver {
-  max-width: 100%;
-  padding: 120px 24px;
-  background: var(--navy);
-  border-top: 1px solid rgba(123,167,255,0.08);
-  border-bottom: 1px solid rgba(123,167,255,0.08);
- }
- #vancouver .inner {
-  max-width: 860px;
-  margin: 0 auto;
- }
- #vancouver h2 {
-  font-family: var(--syne);
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  color: var(--white);
- }
- #vancouver h2 em { font-style: normal; color: var(--arc); }
- .van-body {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--muted);
-  max-width: 560px;
-  margin-bottom: 56px;
-  line-height: 1.8;
- }
- .van-questions {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-bottom: 56px;
- }
- .van-q {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 28px 32px;
-  background: rgba(0,0,0,0.3);
-  border-left: 2px solid rgba(123,167,255,0.15);
- }
- .van-num {
-  font-family: var(--syne);
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--arc);
-  letter-spacing: 0.1em;
-  min-width: 28px;
-  padding-top: 3px;
- }
- .van-q p {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--white);
-  line-height: 1.5;
-  margin: 0;
- }
- .van-dates {
-  display: flex;
-  gap: 2px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
- }
- .van-date-card {
-  flex: 1;
-  min-width: 180px;
-  background: var(--black);
-  border: 1px solid rgba(123,167,255,0.12);
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
- }
- .van-date-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
- }
- .van-date-val {
-  font-family: var(--syne);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--arc);
-  letter-spacing: -0.02em;
- }
- .van-date-time {
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-weight: 300;
- }
- .van-close {
-  font-size: 0.88rem;
-  color: var(--muted);
-  font-weight: 300;
-  line-height: 1.75;
- }
-
- @media (max-width: 700px) {
-  nav { padding: 16px 20px; }
-  #hero { padding-top: 84px; }
-  .hero-eyebrow { font-size: 0.62rem; letter-spacing: 0.14em; }
-  #trust .inner { grid-template-columns: 1fr; gap: 48px; }
-  footer { flex-direction: column; align-items: flex-start; }
- }
-
- @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .orb-link, .hero-eyebrow, .hero-headline, .hero-sub, .hero-cta-group, .scroll-hint {
-   opacity: 1 !important; transform: none !important;
-  }
- }
-  /* skip nav */
-  .skip-link {
-    position: absolute;
-    top: -100px;
-    left: 16px;
-    background: var(--arc);
-    color: var(--black);
-    padding: 8px 16px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 2px;
-    z-index: 999;
-    transition: top 0.2s;
-    text-decoration: none;
-  }
-  .skip-link:focus { top: 16px; }
-
- /* ============ LIGHT THEME (readability pass) ============ */
- /* Content sits on clean white; hero, closing orb band and footer stay
-    dark so the orb keeps its glow. Accents are the orb's blue. */
- #moment    { background: var(--paper2); }
- #how       { background: var(--paper); }
- #trust     { background: var(--paper2); }
- #who       { background: var(--paper); }
- #vancouver { background: var(--paper2); border-top-color: var(--line); border-bottom-color: var(--line); }
- .moment-number { -webkit-text-stroke: 1px rgba(26,59,255,0.22); }
-
- /* cards → white with a soft border, gentle shadow, real spacing */
- .steps, .phase-grid, .trust-pillars, .van-questions, .van-dates { gap: 16px; }
- .step, .phase-card, .pillar, .van-q, .van-date-card {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(16,20,40,0.05);
- }
- .phase-active { border-top: 2px solid var(--accent); }
- .pillar { border-left: 3px solid var(--accent); }
- .van-q  { border-left: 3px solid var(--accent); }
- .phase-tags span { border-color: rgba(26,59,255,0.18); }
- .phase-badge { color: #fff; }
-
- /* dark blocks keep dark background + light text */
- nav { background: rgba(6,10,20,0.82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
- .nav-logo { color: #f0f4ff; }
- .nav-cta { color: #cdd8ff; border-color: rgba(180,200,255,0.35); }
- .nav-cta:hover { border-color: #7ba7ff; color: #fff; }
-
- #hero { background: var(--black); }
- .hero-eyebrow  { color: rgba(184,204,255,0.62); }
- .hero-headline { color: #f2f5ff; }
- .hero-headline em { color: #7ba7ff; }
- .hero-sub  { color: rgba(200,214,255,0.74); }
- .orb-label { color: rgba(184,204,255,0.55); }
- .scroll-line { background: linear-gradient(to bottom, #7ba7ff, transparent); }
- .btn-primary { color: #fff; }
- .btn-primary:hover { background: #0f2bd6; }
- .btn-ghost { color: #dbe4ff; border-color: rgba(180,200,255,0.35); }
- .btn-ghost:hover { border-color: #7ba7ff; color: #fff; }
-
- #cta-band { background: var(--navy); }
- #cta-band h2 { color: #f2f5ff; }
- #cta-band h2 em { color: #7ba7ff; }
- #cta-band p { color: rgba(200,214,255,0.74); }
- .cta-orb-label { color: rgba(184,204,255,0.55); }
-
- footer { background: var(--navy); border-top-color: rgba(180,200,255,0.12); }
- .footer-logo { color: rgba(210,222,255,0.72); }
- footer small { color: rgba(184,204,255,0.5); }
+:root{
+  color-scheme: dark;
+  --night:#0a0f1c;
+  --tile:#111a2d;
+  --tile-line:#1c2740;
+  --ink:#eef1f8;
+  --muted:#a3aec7;
+  --glow:#5b82ff;
+  --lamp:#ffcf7a;
+  --field:#0d1526;
+  --ok:#7fe0b0;
+  --err:#ff9a8a;
+  --serif:'Newsreader', Georgia, 'Times New Roman', serif;
+  --sans:'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono:'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--night);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--lamp);outline-offset:3px;border-radius:6px}
+.wrap{max-width:720px;margin:0 auto;padding-inline:20px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;background:var(--ink);color:var(--night);padding:8px 12px;z-index:10}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:.01em}
+.brand img{width:32px;height:32px;border-radius:50%}
+.bar-cta{font-size:.9rem;font-weight:600;text-decoration:none;padding:8px 14px;border:1px solid var(--tile-line);border-radius:999px;color:var(--ink)}
+.bar-cta:hover{border-color:var(--glow)}
+.scene{padding-block:48px 72px;border-bottom:1px solid var(--tile-line);background:radial-gradient(60% 50% at 85% 10%, rgba(255,207,122,.10), transparent 70%),linear-gradient(var(--night),var(--night));overflow:hidden}
+/* Hero orb: the Hey Buddy symbol, clickable to the app */
+.hero-orb{display:block;position:relative;width:200px;height:200px;margin:8px auto 64px;text-decoration:none}
+.hero-orb::before{content:'';position:absolute;top:50%;left:50%;width:520px;height:520px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(26,59,255,.18) 0%,transparent 70%);pointer-events:none}
+.orb-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(65,105,255,.25);animation:ringPulse 3s ease-out infinite;pointer-events:none}
+.orb-ring:nth-child(1){width:220px;height:220px;animation-delay:0s}
+.orb-ring:nth-child(2){width:275px;height:275px;animation-delay:.8s}
+.orb-ring:nth-child(3){width:335px;height:335px;animation-delay:1.6s}
+@keyframes ringPulse{0%{opacity:.6;transform:translate(-50%,-50%) scale(.95)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.15)}}
+@keyframes orbPulse{0%,100%{filter:drop-shadow(0 0 30px rgba(65,105,255,.45)) brightness(1);transform:scale(1)}50%{filter:drop-shadow(0 0 65px rgba(65,105,255,.85)) brightness(1.08);transform:scale(1.03)}}
+.hero-orb img{position:relative;z-index:2;display:block;width:200px;height:200px;border-radius:50%;object-fit:cover;clip-path:circle(50%);animation:orbPulse 3.5s ease-in-out infinite}
+.hero-orb:hover img{animation:none;filter:drop-shadow(0 0 80px rgba(65,105,255,.95)) brightness(1.12);transform:scale(1.06);transition:transform .35s ease,filter .35s ease}
+.hero-orb span{position:absolute;bottom:-34px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.2rem,8vw,3.6rem);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:italic;font-weight:400;color:var(--glow)}
+.lede{font-size:1.1rem;color:var(--muted);max-width:34em;margin:18px 0 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 1rem var(--sans);padding:14px 22px;border-radius:14px;text-decoration:none;border:0;cursor:pointer}
+.btn-main{background:var(--glow);color:#fff}
+.btn-main:hover{filter:brightness(1.08)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--tile-line)}
+.btn-ghost:hover{border-color:var(--glow)}
+.limitline{margin-top:22px;font-size:.85rem;color:var(--muted)}
+section{padding-block:64px;border-bottom:1px solid var(--tile-line)}
+.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lamp);margin:0 0 12px}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,5.4vw,2.4rem);line-height:1.15;margin:0 0 16px;text-wrap:balance}
+p{margin:0 0 14px;max-width:36em}
+.muted{color:var(--muted)}
+.fact{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:baseline;margin-top:24px}
+.fact b{font-family:var(--serif);font-size:clamp(2.4rem,9vw,3.4rem);font-weight:600;color:var(--lamp);line-height:1;font-variant-numeric:tabular-nums}
+.fact span{color:var(--ink)}
+.source{font-size:.8rem;color:var(--muted);margin-top:16px}
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:22px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;counter-increment:s}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:.95rem;color:var(--glow);border:1px solid var(--tile-line);background:var(--tile)}
+.steps h3{margin:6px 0 4px;font-size:1.1rem;font-weight:600}
+.steps p{margin:0;color:var(--muted)}
+.hears{margin:28px 0 0;display:grid;gap:0}
+.hears div{display:grid;grid-template-columns:minmax(0,11em) 1fr;gap:18px;padding-block:16px;border-top:1px solid var(--tile-line)}
+.hears dt{font-size:.85rem;color:var(--muted);padding-top:3px}
+.hears dd{margin:0;font-family:var(--serif);font-size:1.2rem;line-height:1.35}
+@media (max-width:520px){.hears div{grid-template-columns:1fr;gap:4px}}
+.founder blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(1.35rem,4.4vw,1.75rem);line-height:1.4;max-width:30em}
+.founder cite{display:block;margin-top:18px;font-style:normal;font-size:.95rem;color:var(--muted)}
+.limits{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px}
+.limits li{padding-left:22px;position:relative}
+.limits li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:2px;background:var(--lamp)}
+.orb-link{display:block;width:min(200px,60vw);margin:0 auto 20px;border-radius:50%;box-shadow:0 0 60px rgba(91,130,255,.35)}
+.orb-link img{display:block;width:100%;height:auto;border-radius:50%}
+.center{text-align:center}
+.center p{margin-inline:auto}
+form{margin-top:26px;display:grid;gap:18px;max-width:30em}
+label,.legend{font-size:.9rem;font-weight:600;display:block;margin-bottom:6px}
+.opt{font-weight:400;color:var(--muted)}
+input[type=text],input[type=email],select{width:100%;font:1rem var(--sans);color:var(--ink);background:var(--field);border:1px solid var(--tile-line);border-radius:12px;padding:13px 14px}
+input::placeholder{color:#6d7894}
+fieldset{border:0;margin:0;padding:0}
+.choices{display:flex;flex-wrap:wrap;gap:10px}
+.choices label{display:inline-flex;align-items:center;gap:8px;font-weight:500;margin:0;padding:10px 14px;border:1px solid var(--tile-line);border-radius:12px;background:var(--field);cursor:pointer}
+.choices input{accent-color:var(--glow)}
+.form-note{font-size:.85rem;color:var(--muted);margin:0}
+.status{font-size:.95rem;margin:0}
+.status.ok{color:var(--ok)}
+.status.err{color:var(--err)}
+.done{padding:22px;border:1px solid var(--tile-line);border-radius:16px;background:var(--tile);margin-top:26px}
+.done h3{font-family:var(--serif);font-size:1.4rem;margin:0 0 6px}
+footer{padding-block:40px 56px;font-size:.85rem;color:var(--muted)}
+.disclaimer{color:var(--ink);font-weight:600;margin-bottom:10px}
+.foot-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px}
+[hidden]{display:none!important}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- NAV -->
-<a class="skip-link" href="#main-content">skip to content</a>
-<nav role="banner" aria-label="site navigation">
- <a class="nav-logo" href="#"><span>hey</span>buddy</a>
- <a class="nav-cta" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer">try it</a>
-</nav>
-
-<main id="main-content" role="main">
-<!-- HERO -->
-<section id="hero">
- <p class="hero-eyebrow">campus safety · voice-activated · governance-first · Vancouver</p>
-
- <!-- Orb — click to app -->
- <a class="orb-link" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Try Hey Buddy">
-  <div class="orb-ring"></div>
-  <div class="orb-ring"></div>
-  <div class="orb-ring"></div>
-  <img class="orb-img" src="orb.jpg" alt="heybuddy voice-activated emergency assistant icon" width="220" height="220" />
-  <span class="orb-label">just say "heybuddy"</span>
- </a>
-
- <h1 class="hero-headline"><em>heybuddy.</em><span class="visually-hidden"> voice-activated campus safety for students and faculty</span></h1>
-
- <p class="hero-sub">
-  voice-activated campus safety for students and faculty.<br>
-  say "heybuddy". we're here to help.
- </p>
-
- <div class="hero-cta-group">
-  <a class="btn-primary" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer">try it</a>
-  <a class="btn-ghost" href="#moment">how it works</a>
- </div>
-
- <div class="scroll-hint">
-  <div class="scroll-line"></div>
- </div>
-</section>
-
-<!-- MOMENT -->
-<div id="moment">
- <div class="inner">
-  <span class="moment-number">60</span>
-  <h2 class="moment-headline">the first 60 seconds<br>decide everything</h2>
-  <p class="moment-body">
-   when something goes wrong, your brain stops working the way it usually does. panic compresses time. decisions feel impossible. on campus that moment can be an injury, a spiked drink, someone following you, or a situation you can't say out loud — for a student or a staff member alike. heybuddy is built for it, not to replace 911 or campus security, but to help you reach them faster and clearer.
-  </p>
- </div>
+<div class="wrap">
+  <header class="bar">
+    <a class="brand" href="https://heybuddyapp.ca"><img src="https://hey-buddy-canada.lovable.app/pwa-192x192.png" alt="" width="32" height="32">Hey Buddy</a>
+    <a class="bar-cta" href="#waitlist">Join the waitlist</a>
+  </header>
 </div>
 
-<!-- HOW IT WORKS -->
-<div id="how">
- <div class="inner">
-  <span class="section-eyebrow">how it works</span>
-  <h2>say "heybuddy".</h2>
-    <p class="how-sub">on campus, in the moment, for students and faculty. heybuddy is here to help.</p>
-  <div class="steps">
-   <div class="step">
-    <span class="step-gate">step 1</span>
-    <h3>it hears you</h3>
-    <p>voice-activated. no tapping, no unlocking. works when your hands are full.</p>
-   </div>
-   <div class="step">
-    <span class="step-gate">step 2</span>
-    <h3>it finds you</h3>
-    <p>it confirms your location and trusted contacts before anything else happens.</p>
-   </div>
-   <div class="step">
-    <span class="step-gate">step 3</span>
-    <h3>it understands</h3>
-    <p>it classifies what's happening — injury, threat, panic, disorientation — and responds accordingly.</p>
-   </div>
-   <div class="step">
-    <span class="step-gate">step 4</span>
-    <h3>it asks first</h3>
-    <p>nothing escalates without your say. heybuddy never calls anyone automatically.</p>
-   </div>
+<main id="main">
+  <div class="scene">
+    <div class="wrap">
+      <a class="hero-orb" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Try Hey Buddy">
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <img src="orb.jpg" alt="Hey Buddy symbol" width="200" height="200">
+        <span>just say "Hey Buddy"</span>
+      </a>
+      <p class="eyebrow">Why Hey Buddy</p>
+      <h1>Because you care about the people you love. <em>Sometimes an extra precaution is how you make sure they're looked after.</em></h1>
+      <p class="lede">Hey Buddy is a voice app for older adults who live alone. If they fall or get hurt and can't reach help, they can talk to their phone instead of finding a button. It helps them stay calm, works out where they are, and connects them to 911 or to you.</p>
+      <div class="cta-row">
+        <a class="btn btn-main" href="#waitlist">Join the waitlist</a>
+        <a class="btn btn-ghost" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer">Try the prototype</a>
+      </div>
+      <p class="limitline">Prototype. Not an emergency service. Works alongside 911.</p>
+    </div>
   </div>
- </div>
-</div>
 
-<!-- TRUST -->
-<div id="trust">
- <div class="inner">
-  <div class="trust-text">
-   <span class="section-eyebrow">built different</span>
-   <h2>governance isn't a feature.<br>it's the foundation.</h2>
-   <p>most safety apps are built to engage. heybuddy is built to contain — bounded escalation, consent at every step, nothing autonomous.</p>
-   <p>designed to coexist with emergency services, not compete with them.</p>
-  </div>
-  <div class="trust-pillars">
-   <div class="pillar">
-    <div class="pillar-title">no autonomous calls</div>
-    <p>heybuddy never contacts emergency services on your behalf. you stay in control.</p>
-   </div>
-   <div class="pillar">
-    <div class="pillar-title">stores nothing</div>
-    <p>no passive listening. no background monitoring. no data retained after your session ends.</p>
-   </div>
-   <div class="pillar">
-    <div class="pillar-title">fails safely</div>
-    <p>if heybuddy isn't sure, it steps back. uncertainty reduces capability — never expands it.</p>
-   </div>
-   <div class="pillar">
-    <div class="pillar-title">built for institutions</div>
-    <p>architecture designed to pass legal, compliance, and municipal review — not just app store approval.</p>
-   </div>
-  </div>
- </div>
-</div>
+  <section aria-labelledby="what">
+    <div class="wrap">
+      <p class="eyebrow">What it does</p>
+      <h2 id="what">It orients, calms, and reaches help.</h2>
+      <ol class="steps">
+        <li><div><h3>Listens</h3><p>They say what happened in their own words. Hey Buddy turns it into text, so the details are ready for whoever they call.</p></div></li>
+        <li><div><h3>Calms and orients</h3><p>Short, steady prompts, one at a time. It captures their location and lays out what to tell a dispatcher.</p></div></li>
+        <li><div><h3>Reaches help</h3><p>They choose: 911 when it's urgent, a non-emergency line when it isn't, or one of up to 2 people they trust.</p></div></li>
+      </ol>
+      <p class="muted" style="margin-top:22px">It never calls or messages anyone on its own. The person confirms every step.</p>
+    </div>
+  </section>
 
-<!-- PHASES -->
-<div id="who">
- <div class="inner">
-  <span class="section-eyebrow">built for campus</span>
-  <h2>every kind of campus emergency.<br><em>one buddy.</em></h2>
-  <p class="sub">campus safety isn't one problem. heybuddy is built for the whole range — for students, grad students, faculty and staff — with the same governance, the same voice, and the same consent-first rules behind every one.</p>
-  <div class="phase-grid">
-   <div class="phase-card phase-active">
-    <div class="phase-top">
-     <span class="phase-label">physical emergency</span>
+  <section aria-labelledby="who">
+    <div class="wrap">
+      <p class="eyebrow">Who it's for</p>
+      <h2 id="who">Older adults living alone, and the family who worries about them.</h2>
+      <dl class="hears">
+        <div><dt>Who uses it</dt><dd>An older adult who lives on their own and wants help to be one sentence away.</dd></div>
+        <div><dt>Who sets it up</dt><dd>Their adult children or family, often together with them.</dd></div>
+        <div><dt>Who pays</dt><dd>The family. The pilot is free, and pricing gets set after it.</dd></div>
+        <div><dt>Where</dt><dd>At home, starting in Vancouver, BC.</dd></div>
+      </dl>
     </div>
-    <h3>injury &amp; medical</h3>
-    <p>a fall in a lab, a seizure in a lecture hall, someone collapses at practice, or you're hurt alone in an empty building. fully voice-operated, so your hands stay free to help while heybuddy orients you and gets a clear picture ready for campus security or 911.</p>
-    <div class="phase-tags">
-     <span>labs &amp; workshops</span>
-     <span>gyms &amp; playing fields</span>
-     <span>empty buildings</span>
-     <span>someone collapses</span>
-     <span>hurt and alone</span>
-    </div>
-   </div>
-   <div class="phase-card phase-active">
-    <div class="phase-top">
-     <span class="phase-label">impairment</span>
-    </div>
-    <h3>intoxication &amp; overdose</h3>
-    <p>a party where someone stops responding, a spiked drink, a friend you can't wake, or your own head not working right. heybuddy stays calm and structured when you can't, and helps you reach the right help without guessing.</p>
-    <div class="phase-tags">
-     <span>residence &amp; parties</span>
-     <span>spiked drinks</span>
-     <span>a friend won't wake</span>
-     <span>you're not okay</span>
-     <span>getting home safe</span>
-    </div>
-   </div>
-   <div class="phase-card phase-active">
-    <div class="phase-top">
-     <span class="phase-label">harassment</span>
-    </div>
-    <h3>bullying, harassment &amp; threats</h3>
-    <p>being followed across campus, cornered, targeted online and off, or watching a situation escalate. heybuddy helps you get oriented, share where you are, and reach the right people before it goes further.</p>
-    <div class="phase-tags">
-     <span>being followed</span>
-     <span>cornered or targeted</span>
-     <span>escalating conflict</span>
-     <span>online spilling offline</span>
-     <span>reaching campus security</span>
-    </div>
-   </div>
-   <div class="phase-card phase-active">
-    <div class="phase-top">
-     <span class="phase-label">assault &amp; abuse</span>
-    </div>
-    <h3>assault &amp; abuse</h3>
-    <p>sexual assault, relationship or partner abuse, coercion by someone you know. heybuddy is consent-first and never acts on its own — it helps you reach support, a trusted contact, campus resources, or 911 on your terms, and can have a clear account ready if and when you choose to share it.</p>
-    <div class="phase-tags">
-     <span>sexual assault</span>
-     <span>partner &amp; relationship abuse</span>
-     <span>coercion</span>
-     <span>trusted-contact alerts</span>
-     <span>support on your terms</span>
-    </div>
-   </div>
-   <div class="phase-card phase-active">
-    <div class="phase-top">
-     <span class="phase-label">silent emergency</span>
-     <span class="phase-badge">in development</span>
-    </div>
-    <h3>when you can't speak</h3>
-    <p>someone's in the room, you're hiding, or saying it out loud isn't safe. a discreet path that doesn't need your voice, so you can reach help without being heard. building now, held to the same consent and governance rules as every other lane.</p>
-    <div class="phase-tags">
-     <span>someone's in the room</span>
-     <span>coercion</span>
-     <span>hiding</span>
-     <span>discreet activation</span>
-     <span>no voice needed</span>
-    </div>
-   </div>
-   <div class="phase-card phase-active">
-    <div class="phase-top">
-     <span class="phase-label">alone &amp; after dark</span>
-    </div>
-    <h3>alone after dark</h3>
-    <p>walking home from a night class, a late lab or studio, an empty parking lot, or a night shift on campus. voice-operated and hands-free, so you can keep moving while heybuddy tracks where you are and gets help ready if you need it.</p>
-    <div class="phase-tags">
-     <span>walking home</span>
-     <span>night classes &amp; late labs</span>
-     <span>parking lots</span>
-     <span>night-shift staff</span>
-     <span>crossing campus at 2am</span>
-    </div>
-   </div>
-  </div>
-  <p class="sub" style="margin-top:36px;">one thing we won't rush: mental-health support. it's coming — and it only ships when it clears the same bar as everything else here: governance, consent, and real testing first, not a moment before. today the core voice flow is in active testing, and discreet and silent modes are in development.</p>
- </div>
-</div>
+  </section>
 
+  <section aria-labelledby="why-gap">
+    <div class="wrap">
+      <p class="eyebrow">Why it's needed</p>
+      <h2 id="why-gap">Medical alert buttons only work when they're worn.</h2>
+      <p class="muted">Many families already pay for a pendant or wrist button. Most of the time, it isn't on.</p>
+      <div class="fact"><b>18%</b><span>of medical alert users wear it all the time.</span></div>
+      <div class="fact"><b>64%</b><span>take it off to shower.</span></div>
+      <p class="source">Source: <a href="https://www.theseniorlist.com/research/medical-alert-device-consumer-usage-study/" target="_blank" rel="noopener noreferrer">The Senior List, Medical Alert Device Consumer Usage Study, 2026</a></p>
+      <p class="muted" style="margin-top:18px">Hey Buddy adds a voice option. It doesn't replace a medical alert service or 911.</p>
+    </div>
+  </section>
 
-<!-- VANCOUVER EXPERIMENT -->
-<div id="vancouver">
- <div class="inner">
-  <span class="section-eyebrow">The Vancouver Experiment</span>
-  <h2>meet us at<br><em>English Bay.</em></h2>
-  <p class="van-body">
-   we're not doing a product demo. we're asking three questions to strangers on the seawall and listening to what they say.
-  </p>
-  <div class="van-questions">
-   <div class="van-q">
-    <span class="van-num">01</span>
-    <p>what would you reach for in a panic?</p>
-   </div>
-   <div class="van-q">
-    <span class="van-num">02</span>
-    <p>what makes you trust a safety app?</p>
-   </div>
-   <div class="van-q">
-    <span class="van-num">03</span>
-    <p>where in Vancouver do you feel on your own?</p>
-   </div>
-  </div>
-  <div class="van-dates">
-   <div class="van-date-card">
-    <span class="van-date-label">date one</span>
-    <span class="van-date-val">July 12</span>
-    <span class="van-date-time">Saturday · 11am – 2pm</span>
-   </div>
-   <div class="van-date-card">
-    <span class="van-date-label">date two</span>
-    <span class="van-date-val">July 19</span>
-    <span class="van-date-time">Saturday · 11am – 2pm</span>
-   </div>
-  </div>
-  <p class="van-close">Near the concession stand at English Bay. Look for the banner. Come say hi or just take a card.</p>
- </div>
-</div>
+  <section aria-labelledby="hear">
+    <div class="wrap">
+      <p class="eyebrow">What it means for your family</p>
+      <h2 id="hear">What you get from it.</h2>
+      <dl class="hears">
+        <div><dt>Voice activation</dt><dd>No button to find. They just talk.</dd></div>
+        <div><dt>Calm guidance</dt><dd>They're not alone in the scariest minute.</dd></div>
+        <div><dt>Location and details for 911</dt><dd>Help can find them and knows what happened.</dd></div>
+        <div><dt>Trusted contacts</dt><dd>You hear it from them, not a stranger.</dd></div>
+        <div><dt>No recording</dt><dd>Audio is turned into text and then deleted. Nobody listens in.</dd></div>
+      </dl>
+    </div>
+  </section>
 
-<!-- CTA BAND -->
-<div id="cta-band">
- <a class="cta-orb-link" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Try Hey Buddy">
-  <img src="orb.jpg" alt="heybuddy voice-activated emergency assistant icon" width="120" height="120" />
-  <span class="cta-orb-label">just say "heybuddy"</span>
- </a>
- <h2>ready when<br><em>you need it.</em></h2>
- <p>no signup required. say "heybuddy" and go.</p>
- <a class="btn-primary" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer">try it</a>
-</div>
+  <section class="founder" aria-labelledby="story">
+    <div class="wrap">
+      <p class="eyebrow" id="story">Who's building it</p>
+      <blockquote>“I spent 28 years in the trades. I've been hurt alone on remote job sites, with nobody coming. Nobody should go through that, least of all your mom.”</blockquote>
+      <cite>Zander Schwaiger, founder · Vancouver, BC</cite>
+    </div>
+  </section>
 
+  <section aria-labelledby="limits">
+    <div class="wrap">
+      <p class="eyebrow">Where it stands</p>
+      <h2 id="limits">A working prototype, with clear limits.</h2>
+      <ul class="limits">
+        <li>It's a prototype. It is not an emergency service. It works alongside 911, not instead of it.</li>
+        <li>Nobody monitors it around the clock.</li>
+        <li>The phone has to be on, set up, and close enough to hear them.</li>
+        <li>It never calls anyone on its own.</li>
+        <li>Next step: a free 30-day pilot with 5 Vancouver families.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="waitlist" aria-labelledby="join">
+    <div class="wrap">
+      <a class="orb-link" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Try the Hey Buddy prototype"><img src="orb.jpg" alt="" width="200" height="200"></a>
+      <div class="center">
+        <p class="eyebrow">Founding families</p>
+        <h2 id="join">Join the waitlist for the family pilot.</h2>
+        <p class="muted">I'm taking 5 Vancouver families for a free 30-day pilot, set up in person. Leave your details and I'll contact you myself.</p>
+      </div>
+
+      <form id="wl" novalidate>
+        <div><label for="wl-name">Your name</label><input id="wl-name" name="name" type="text" autocomplete="name" maxlength="80" required placeholder="Sarah Chen"></div>
+        <div><label for="wl-email">Email</label><input id="wl-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="sarah@example.com"></div>
+        <div>
+          <label for="wl-rel">Who is it for? <span class="opt">(optional)</span></label>
+          <select id="wl-rel" name="relationship">
+            <option value="">Choose one</option>
+            <option>My mom</option>
+            <option>My dad</option>
+            <option>My parents</option>
+            <option>My grandparent</option>
+            <option>Another family member</option>
+            <option>Myself</option>
+            <option>Someone else</option>
+          </select>
+        </div>
+        <div><label for="wl-city">City <span class="opt">(optional)</span></label><input id="wl-city" name="city" type="text" autocomplete="address-level2" maxlength="80" placeholder="Vancouver"></div>
+        <fieldset>
+          <legend class="legend">Would you try a free 30-day pilot?</legend>
+          <div class="choices">
+            <label><input type="radio" id="wl-pilot-yes" name="pilot" value="yes" checked> Yes</label>
+            <label><input type="radio" id="wl-pilot-no" name="pilot" value="no"> Not yet</label>
+          </div>
+        </fieldset>
+        <button class="btn btn-main" type="submit" id="wl-submit">Join the waitlist</button>
+        <p class="status" id="wl-status" role="status" aria-live="polite"></p>
+        <p class="form-note">That's all we collect. We only use it to contact you about the pilot. No spam, and we never sell it.</p>
+      </form>
+      <div class="done" id="wl-done" hidden>
+        <h3>You're on the list.</h3>
+        <p class="muted" style="margin:0">Thank you. I'll be in touch personally about the pilot. Zander</p>
+      </div>
+    </div>
+  </section>
 </main>
 
-<!-- FOOTER -->
-<footer role="contentinfo">
- <span class="footer-logo"><span>hey</span>buddy</span>
- <small>Vancouver, BC · governance-first emergency support</small>
- <small><a href="mailto:support@heybuddyapp.ca" style="color:inherit;text-decoration:none;">support@heybuddyapp.ca</a></small>
-  <div class="footer-social">
-    <a href="https://www.instagram.com/passionateheybuddy" target="_blank" rel="noopener noreferrer">instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61584194698091" target="_blank" rel="noopener noreferrer">facebook</a>
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">Prototype. Not an emergency service. Works alongside 911.</p>
+    <p>Hey Buddy offers orientation only and makes no medical judgment. In an emergency, call 911.</p>
+    <div class="foot-links">
+      <a href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer">Try the prototype</a>
+      <a href="https://www.instagram.com/passionateheybuddy" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61584194698091" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p style="margin-top:14px">© 2026 Hey Buddy · Vancouver, BC</p>
   </div>
-  <small class="footer-disclaimer" style="display:block;max-width:520px;margin:1.25rem auto 0;opacity:0.55;line-height:1.6;font-size:0.72rem;">
-    Hey Buddy is an early prototype, built in public. It is not an emergency service and does not replace 911. It offers orientation only and makes no clinical judgment. It takes no action without your consent. Provided as is, with no warranty. In an emergency, call 911.
-  </small>
 </footer>
 
 <script>
-
-
-// ── Scroll reveal ──
-(function() {
- const els = document.querySelectorAll('.step, .pillar, .phase-card');
- const io = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-   if (e.isIntersecting) {
-    setTimeout(() => e.target.classList.add('visible'), i * 80);
-    io.unobserve(e.target);
-   }
+(function(){
+  var URL_='https://osokdhawzaslkbvqccas.supabase.co/rest/v1/waitlist';
+  var KEY='sb_publishable_ieq_1yjnvpn3WYl9wd4l4A_1eUbyd9Q';
+  var EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var f=document.getElementById('wl'),st=document.getElementById('wl-status'),btn=document.getElementById('wl-submit'),done=document.getElementById('wl-done');
+  function say(msg,cls){st.textContent=msg;st.className='status'+(cls?' '+cls:'');}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var el=f.elements,name=el['name'].value.trim(),email=el['email'].value.trim().toLowerCase();
+    if(!name){say('Please add your name.','err');el['name'].focus();return;}
+    if(!EMAIL.test(email)){say('Please check your email address.','err');el['email'].focus();return;}
+    var pilot=(f.querySelector('input[name=pilot]:checked')||{}).value==='yes';
+    btn.disabled=true;btn.textContent='Joining…';say('');
+    fetch(URL_,{method:'POST',headers:{'apikey':KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify({name:name,email:email,relationship:el['relationship'].value||null,city:el['city'].value.trim()||null,wants_pilot:pilot,source:'website'})})
+    .then(function(r){
+      if(r.ok){f.hidden=true;done.hidden=false;return;}
+      throw new Error(r.status);
+    })
+    .catch(function(){
+      btn.disabled=false;btn.textContent='Join the waitlist';
+      say("That didn't go through. Check your connection and try again.",'err');
+    });
   });
- }, { threshold: 0.15 });
- els.forEach(el => io.observe(el));
 })();
 </script>
 
