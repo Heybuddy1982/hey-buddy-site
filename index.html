@@ -132,6 +132,34 @@ fieldset{border:0;margin:0;padding:0}
 footer{padding-block:40px 56px;font-size:.85rem;color:var(--muted)}
 .disclaimer{color:var(--ink);font-weight:600;margin-bottom:10px}
 .foot-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px}
+.bar-actions{display:flex;gap:8px}
+.bar-cta-main{background:var(--glow);border-color:var(--glow);color:#fff}
+.btn-tester{background:var(--lamp);color:#1a1405}
+.btn-tester:hover{filter:brightness(1.05)}
+.cta-note{margin-top:12px;font-size:.9rem;color:var(--ink);opacity:.85}
+.demo{background:radial-gradient(70% 60% at 0% 100%, rgba(91,130,255,.10), transparent 70%)}
+.demo-grid{display:grid;gap:36px;align-items:center}
+@media (min-width:760px){.demo .wrap{max-width:980px}.demo-grid{grid-template-columns:1fr 340px}}
+.phone{margin:0 auto;width:min(320px,100%);border:1px solid var(--tile-line);border-radius:36px;padding:12px;background:#060a14;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 6px #0c1322}
+.phone-screen{border-radius:26px;background:var(--tile);padding:18px 14px;display:grid;gap:10px;min-height:470px;align-content:start}
+.phone figcaption{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+.say{margin:0;padding:10px 12px;border-radius:14px;font-size:.88rem;line-height:1.4;max-width:92%}
+.say.you{justify-self:end;background:#1f2b47;color:var(--ink);border-bottom-right-radius:4px}
+.say.buddy{justify-self:start;background:rgba(91,130,255,.16);border:1px solid rgba(91,130,255,.35);border-bottom-left-radius:4px}
+.qa{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.85rem;padding:8px 12px;border-radius:12px;background:var(--field);border:1px solid var(--tile-line)}
+.qa b{font-size:.8rem;padding:3px 10px;border-radius:999px;background:rgba(127,224,176,.15);color:var(--ok)}
+.qa b.no{background:rgba(255,154,138,.15);color:var(--err)}
+.card911{margin-top:4px;border-radius:16px;border:1px solid rgba(255,107,107,.45);background:rgba(255,107,107,.06);padding:12px}
+.card911 .call{text-align:center;font-weight:700;color:#fff;background:linear-gradient(135deg,#e5484d,#c22d32);border-radius:12px;padding:10px;margin-bottom:10px}
+.card911 dl{margin:0;display:grid;gap:6px}
+.card911 dl div{display:grid;grid-template-columns:7.2em 1fr;gap:8px;font-size:.78rem}
+.card911 dt{color:var(--muted)}
+.card911 dd{margin:0}
+.phone-screen>*{transition:opacity .45s ease,transform .45s ease}
+.js .phone-screen>*{opacity:0;transform:translateY(6px)}
+.js .phone-screen>.on{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .phone-screen>*{opacity:1;transform:none}}
+@media (max-width:420px){.bar-cta{padding:7px 11px;font-size:.82rem}.brand{font-size:.95rem}}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -141,30 +169,65 @@ footer{padding-block:40px 56px;font-size:.85rem;color:var(--muted)}
 <div class="wrap">
   <header class="bar">
     <a class="brand" href="https://heybuddyapp.ca"><img src="/apple-touch-icon.png" alt="" width="32" height="32">Hey Buddy</a>
-    <a class="bar-cta" href="#waitlist">Join the waitlist</a>
+    <nav class="bar-actions" aria-label="Get Hey Buddy">
+      <a class="bar-cta bar-cta-main" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer">Try the app</a>
+      <a class="bar-cta" href="#waitlist">Waitlist</a>
+    </nav>
   </header>
 </div>
 
 <main id="main">
   <div class="scene">
     <div class="wrap">
-      <a class="hero-orb" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Download Hey Buddy">
+      <a class="hero-orb" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Try the Hey Buddy app">
         <div class="orb-ring"></div>
         <div class="orb-ring"></div>
         <div class="orb-ring"></div>
         <img src="orb.jpg" alt="Hey Buddy symbol" width="200" height="200">
-        <span>tap the orb, then talk</span>
+        <span>tap to try it</span>
       </a>
       <p class="eyebrow">For people who live on their own</p>
       <h1>Hey Buddy. <em>A voice safety layer for the people you love.</em></h1>
       <p class="lede">For the moment someone you love is alone, hurt or overwhelmed, and the next step is hard. They tell Hey Buddy what happened. Buddy keeps them calm, shows them where they are, helps them find the words, and gets them to someone they trust or to 911. No monitoring. No recordings. Their independence stays theirs.</p>
       <div class="cta-row">
-        <a class="btn btn-main" href="#early-testers">Become an early tester</a>
+        <a class="btn btn-main" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer">Try the app &mdash; free</a>
+        <a class="btn btn-tester" href="#early-testers">Be a tester</a>
         <a class="btn btn-ghost" href="#waitlist">Join the waitlist</a>
       </div>
+      <p class="cta-note">Opens in your browser. No app store. A practice run never calls anyone.</p>
       <p class="limitline">Prototype. Not an emergency service. Works alongside 911.</p>
     </div>
   </div>
+
+  <section class="demo" aria-labelledby="demo-h">
+    <div class="wrap demo-grid">
+      <div>
+        <p class="eyebrow">See it in 20 seconds</p>
+        <h2 id="demo-h">Say what happened. Buddy does the rest.</h2>
+        <p class="muted">One sentence. Buddy says it back so they know it heard right, asks three short questions, and puts everything 911 needs on one screen. They choose who to call.</p>
+        <a class="btn btn-main" href="https://hey-buddy-activation.vercel.app" target="_blank" rel="noopener noreferrer" style="margin-top:8px">Try it yourself</a>
+      </div>
+      <figure class="phone" aria-label="Example of a Hey Buddy run">
+        <div class="phone-screen">
+          <p class="say you" style="--d:0s">&ldquo;Hey Buddy, I fell in the bathroom and hurt my hip.&rdquo;</p>
+          <p class="say buddy" style="--d:1.6s">I heard you fell and hurt your hip in the bathroom. I have your location.</p>
+          <div class="qa" style="--d:3.4s"><span>Breathing normally?</span><b>Yes</b></div>
+          <div class="qa" style="--d:4.4s"><span>Are you bleeding?</span><b>No</b></div>
+          <div class="qa" style="--d:5.4s"><span>Can you move on your own?</span><b class="no">No</b></div>
+          <div class="card911" style="--d:6.6s">
+            <div class="call">Call 911</div>
+            <dl>
+              <div><dt>Location</dt><dd>At home (your saved address)</dd></div>
+              <div><dt>What happened</dt><dd>Fell in the bathroom, hurt hip</dd></div>
+              <div><dt>Mobility</dt><dd>Can&rsquo;t move on their own</dd></div>
+              <div><dt>Callback</dt><dd>Their number</dd></div>
+            </dl>
+          </div>
+        </div>
+        <figcaption>Example run. Nothing is called until they tap.</figcaption>
+      </figure>
+    </div>
+  </section>
 
   <section id="early-testers" aria-labelledby="testers">
     <div class="wrap">
@@ -327,5 +390,23 @@ footer{padding-block:40px 56px;font-size:.85rem;color:var(--muted)}
 })();
 </script>
 
+<script>
+/* Demo phone: steps appear in order, hold, then replay. Reduced motion: all shown, static. */
+(function(){
+  var scr=document.querySelector('.phone-screen'); if(!scr) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js');
+  var items=[].slice.call(scr.children);
+  function run(){
+    items.forEach(function(el){el.classList.remove('on');});
+    items.forEach(function(el){
+      var d=parseFloat((el.getAttribute('style')||'').replace(/.*--d:\s*([\d.]+)s.*/,'$1'))||0;
+      setTimeout(function(){el.classList.add('on');}, 400+d*1000);
+    });
+    setTimeout(run, 13000);
+  }
+  run();
+})();
+</script>
 </body>
 </html>
